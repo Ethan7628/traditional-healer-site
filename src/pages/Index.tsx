@@ -21,7 +21,7 @@ const Index = () => {
   };
 
   const generateWhatsAppMessage = () => {
-    const message = "Hello Dr. Kibuka, I would like to schedule a consultation for traditional healing services. Please let me know your availability.";
+    const message = "Hello Spiritual Healer Kabanga Joel, I would like to schedule a consultation for traditional healing services. Please let me know your availability.";
     const phoneNumber = "256701234567"; // Replace with actual WhatsApp number
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
@@ -29,51 +29,96 @@ const Index = () => {
 
   const services = [
     {
-      title: "Herbal Medicine",
-      description: "Natural remedies using traditional herbs and plants for various ailments and health conditions.",
-      icon: "🌿"
+      title: "Love Spells & Binding",
+      description: "Powerful love spells to bring back lost lovers, strengthen relationships, and create lasting romantic bonds.",
+      image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=300&fit=crop"
     },
     {
-      title: "Spiritual Cleansing",
-      description: "Removal of negative energies, spiritual blockages, and protection rituals for spiritual wellness.",
-      icon: "✨"
+      title: "Money & Wealth Spells",
+      description: "Traditional rituals to attract financial prosperity, business success, and remove money blockages.",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop"
     },
     {
-      title: "Love & Relationship",
-      description: "Traditional solutions for relationship problems, marriage issues, and matters of the heart.",
-      icon: "💕"
+      title: "Protection & Cleansing",
+      description: "Spiritual protection from enemies, evil eyes, witchcraft, and negative energies affecting your life.",
+      image: "https://images.unsplash.com/photo-1544131750-2985d621da30?w=400&h=300&fit=crop"
     },
     {
-      title: "Business Success",
-      description: "Spiritual guidance and rituals to attract prosperity, success, and good fortune in business.",
-      icon: "📈"
+      title: "Court Case Spells",
+      description: "Legal assistance through traditional methods to win court cases and overcome legal challenges.",
+      image: "https://images.unsplash.com/photo-1589216532372-9c7e1d8d5b8c?w=400&h=300&fit=crop"
     },
     {
-      title: "Ancestral Guidance",
-      description: "Communication with ancestors for guidance, wisdom, and spiritual direction in life decisions.",
-      icon: "🙏"
+      title: "Marriage & Divorce",
+      description: "Traditional solutions for marriage problems, divorce prevention, and relationship healing.",
+      image: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&h=300&fit=crop"
     },
     {
-      title: "Health & Wellness",
-      description: "Traditional healing methods for physical, mental, and emotional health restoration.",
-      icon: "⚕️"
+      title: "Fertility & Pregnancy",
+      description: "Traditional remedies for fertility issues, safe pregnancy, and childbirth complications.",
+      image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop"
+    },
+    {
+      title: "Business & Career",
+      description: "Spells for job promotion, business growth, customer attraction, and career advancement.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
+    },
+    {
+      title: "Health & Healing",
+      description: "Traditional healing for chronic illnesses, mental health issues, and spiritual ailments.",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop"
+    },
+    {
+      title: "Spiritual Guidance",
+      description: "Connect with ancestral spirits for guidance, wisdom, and spiritual direction in life decisions.",
+      image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop"
+    },
+    {
+      title: "Enemy Protection",
+      description: "Strong protection spells against enemies, jealousy, hatred, and those who wish you harm.",
+      image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&h=300&fit=crop"
+    },
+    {
+      title: "Gambling & Luck",
+      description: "Traditional methods to improve luck in gambling, lotteries, and games of chance.",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    },
+    {
+      title: "Addiction Recovery",
+      description: "Traditional healing methods for overcoming addictions to alcohol, drugs, and harmful behaviors.",
+      image: "https://images.unsplash.com/photo-1559757145-5d4a4d97d7e0?w=400&h=300&fit=crop"
     }
   ];
 
   const testimonials = [
     {
       name: "Sarah M.",
-      text: "Dr. Kibuka's herbal remedies completely transformed my health. I'm forever grateful for his wisdom and care.",
+      text: "Kabanga Joel's love spells brought my husband back after 3 years of separation. I'm forever grateful for his powerful work.",
       rating: 5
     },
     {
       name: "James K.",
-      text: "After years of struggle, Dr. Kibuka's spiritual guidance brought peace and success to my business.",
+      text: "After years of financial struggle, his money spells transformed my business. I now have more wealth than ever.",
       rating: 5
     },
     {
       name: "Mary A.",
-      text: "His traditional healing methods helped save my marriage. Dr. Kibuka is truly gifted and authentic.",
+      text: "His protection spells saved me from enemies who wanted to destroy my life. Kabanga Joel is truly gifted.",
+      rating: 5
+    },
+    {
+      name: "David R.",
+      text: "Won my court case against all odds thanks to his powerful legal spells. Highly recommend his services.",
+      rating: 5
+    },
+    {
+      name: "Grace L.",
+      text: "After 10 years of trying, his fertility spells blessed me with twins. Kabanga Joel works miracles.",
+      rating: 5
+    },
+    {
+      name: "Peter M.",
+      text: "His business spells increased my customers by 300%. My shop is now the most successful in town.",
       rating: 5
     }
   ];
@@ -86,7 +131,7 @@ const Index = () => {
       }`}>
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-amber-100">Dr. Kibuka</h1>
+            <h1 className="text-2xl font-bold text-amber-100">Spiritual Healer Kabanga Joel</h1>
             
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
@@ -131,19 +176,27 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/20 to-orange-900/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/30 to-orange-900/40"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1920&h=1080&fit=crop')"
+          }}
+        ></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="animate-fade-in">
-            <div className="text-8xl mb-6">🌿</div>
-            <h1 className="text-5xl md:text-7xl font-bold text-amber-900 mb-6 leading-tight">
-              Dr. Kibuka
+          <div className="animate-fade-in bg-black/60 backdrop-blur-sm rounded-3xl p-8 max-w-4xl mx-auto">
+            <div className="w-32 h-32 bg-gradient-to-br from-amber-200 to-orange-300 rounded-full flex items-center justify-center text-6xl mx-auto mb-6">
+              👨‍⚕️
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-amber-100 mb-4 leading-tight">
+              Spiritual Healer Kabanga Joel
             </h1>
-            <h2 className="text-2xl md:text-3xl text-amber-800 mb-8 font-semibold">
-              Traditional Healer & Spiritual Guide
+            <h2 className="text-xl md:text-2xl text-amber-200 mb-6 font-semibold">
+              Powerful Traditional Healer & Spiritual Guide
             </h2>
-            <p className="text-lg md:text-xl text-amber-700 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Welcome to authentic traditional healing with over 30 years of ancestral wisdom. 
-              Experience the power of ancient remedies combined with spiritual guidance for complete wellness.
+            <p className="text-lg md:text-xl text-amber-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Welcome to authentic spiritual healing with over 30 years of ancestral wisdom. 
+              Experience the power of ancient African traditions combined with powerful spells for love, money, protection, and success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -154,7 +207,7 @@ const Index = () => {
               </button>
               <button
                 onClick={() => scrollToSection('services')}
-                className="border-2 border-amber-900 text-amber-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-900 hover:text-white transition-all duration-300 hover:scale-105"
+                className="border-2 border-amber-200 text-amber-100 px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-200 hover:text-amber-900 transition-all duration-300 hover:scale-105"
               >
                 View Services
               </button>
@@ -168,30 +221,40 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h2 className="text-4xl font-bold text-amber-900 mb-6">About Dr. Kibuka</h2>
+              <h2 className="text-4xl font-bold text-amber-900 mb-6">About Spiritual Healer Kabanga Joel</h2>
               <p className="text-lg text-amber-800 mb-6 leading-relaxed">
-                With over three decades of experience in traditional healing, Dr. Kibuka comes from a long lineage 
-                of respected healers and spiritual guides. Born with the gift of connecting with ancestral spirits 
-                and understanding the healing properties of nature's remedies.
+                With over three decades of experience in traditional African healing and spiritual guidance, 
+                Kabanga Joel comes from a long lineage of respected healers and spiritual practitioners. 
+                Born with the gift of connecting with ancestral spirits and understanding the powerful forces of nature.
               </p>
               <p className="text-lg text-amber-800 mb-6 leading-relaxed">
-                His mission is to bridge ancient wisdom with modern understanding, providing authentic healing 
-                solutions that address not just physical ailments, but spiritual and emotional well-being too.
+                His mission is to help people overcome life's challenges through powerful traditional spells, 
+                spiritual cleansing, and ancestral guidance. Whether you need love spells, money spells, 
+                protection, or healing, Kabanga Joel provides authentic solutions that deliver real results.
               </p>
-              <div className="flex items-center space-x-4 text-amber-700">
+              <div className="flex flex-wrap gap-4 text-amber-700">
                 <div className="flex items-center">
                   <Star className="w-5 h-5 text-yellow-500 mr-1" />
                   <span className="font-semibold">30+ Years Experience</span>
                 </div>
                 <div className="flex items-center">
                   <span className="text-2xl mr-2">🏆</span>
-                  <span className="font-semibold">1000+ Satisfied Clients</span>
+                  <span className="font-semibold">5000+ Satisfied Clients</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-2xl mr-2">⚡</span>
+                  <span className="font-semibold">Powerful Results Guaranteed</span>
                 </div>
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="w-80 h-80 bg-gradient-to-br from-amber-200 to-orange-300 rounded-full flex items-center justify-center text-8xl animate-scale-in shadow-xl">
-                👨‍⚕️
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
+                  alt="Spiritual Healer Kabanga Joel"
+                  className="rounded-xl shadow-2xl w-80 h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-amber-900/30 to-transparent rounded-xl"></div>
               </div>
             </div>
           </div>
@@ -202,20 +265,26 @@ const Index = () => {
       <section id="services" className="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-amber-900 mb-4">Traditional Healing Services</h2>
+            <h2 className="text-4xl font-bold text-amber-900 mb-4">Spiritual Healing Services</h2>
             <p className="text-lg text-amber-700 max-w-2xl mx-auto">
-              Comprehensive traditional healing services rooted in ancestral wisdom and natural remedies
+              Comprehensive spiritual healing services rooted in ancient African traditions and powerful spiritual practices
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-l-4 border-amber-600"
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-l-4 border-amber-600"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-amber-900 mb-3">{service.title}</h3>
-                <p className="text-amber-700 leading-relaxed">{service.description}</p>
+                <img 
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-amber-900 mb-3">{service.title}</h3>
+                  <p className="text-amber-700 leading-relaxed">{service.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -227,9 +296,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-amber-900 mb-4">What Our Clients Say</h2>
-            <p className="text-lg text-amber-700">Real testimonials from people who have experienced healing</p>
+            <p className="text-lg text-amber-700">Real testimonials from people who have experienced powerful results</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
@@ -253,7 +322,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-            <p className="text-lg text-amber-100">Ready to begin your healing journey? Contact Dr. Kibuka today</p>
+            <p className="text-lg text-amber-100">Ready to transform your life? Contact Spiritual Healer Kabanga Joel today</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
@@ -266,8 +335,8 @@ const Index = () => {
             <div className="text-center">
               <Mail className="w-12 h-12 mx-auto mb-4 text-amber-300" />
               <h3 className="text-xl font-bold mb-2">Email</h3>
-              <a href="mailto:drkibuka@healing.com" className="text-amber-100 hover:text-amber-300 transition-colors">
-                drkibuka@healing.com
+              <a href="mailto:kabangajoel@healing.com" className="text-amber-100 hover:text-amber-300 transition-colors">
+                kabangajoel@healing.com
               </a>
             </div>
             <div className="text-center">
@@ -300,8 +369,8 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-amber-950 text-amber-100 py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 Dr. Kibuka Traditional Healer. All rights reserved.</p>
-          <p className="mt-2 text-sm text-amber-300">Ancient Wisdom • Modern Healing • Authentic Results</p>
+          <p>&copy; 2024 Spiritual Healer Kabanga Joel. All rights reserved.</p>
+          <p className="mt-2 text-sm text-amber-300">Ancient Wisdom • Powerful Spells • Guaranteed Results</p>
         </div>
       </footer>
     </div>
