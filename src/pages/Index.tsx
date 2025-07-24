@@ -129,9 +129,25 @@ const Index = () => {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrollY > 50 ? 'bg-amber-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-amber-100">Spiritual Healer Kabanga Joel</h1>
+            {/* Logo */}
+            <div className="flex items-center space-x-3">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-amber-300 to-orange-400 rounded-lg flex items-center justify-center shadow-lg">
+                  <span className="text-amber-900 font-bold text-xl">KJ</span>
+                </div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
+              </div>
+              <div className="hidden sm:block">
+                <h1 className="text-xl font-bold text-amber-100 leading-tight">Kabanga Joel</h1>
+                <p className="text-amber-300 text-xs font-medium">Spiritual Healer</p>
+              </div>
+              <div className="sm:hidden">
+                <h1 className="text-lg font-bold text-amber-100">KJ</h1>
+                <p className="text-amber-300 text-xs">Spiritual Healer</p>
+              </div>
+            </div>
             
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
@@ -180,7 +196,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1920&h=1080&fit=crop')"
+            backgroundImage: "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop')"
           }}
         ></div>
         <div className="container mx-auto px-4 text-center relative z-10">
