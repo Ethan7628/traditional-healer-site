@@ -1,134 +1,105 @@
-
 import { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Star, Menu, X, MessageCircle } from 'lucide-react';
-
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
       setIsMenuOpen(false);
     }
   };
-
   const generateWhatsAppMessage = () => {
     const message = "Hello Spiritual Healer Kabanga Joel, I would like to schedule a consultation for traditional healing services. Please let me know your availability.";
     const phoneNumber = "256701234567"; // Replace with actual WhatsApp number
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
-
-  const services = [
-    {
-      title: "Love Spells & Binding",
-      description: "Powerful love spells to bring back lost lovers, strengthen relationships, and create lasting romantic bonds.",
-      image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=300&fit=crop"
-    },
-    {
-      title: "Money & Wealth Spells",
-      description: "Traditional rituals to attract financial prosperity, business success, and remove money blockages.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop"
-    },
-    {
-      title: "Protection & Cleansing",
-      description: "Spiritual protection from enemies, evil eyes, witchcraft, and negative energies affecting your life.",
-      image: "https://images.unsplash.com/photo-1544131750-2985d621da30?w=400&h=300&fit=crop"
-    },
-    {
-      title: "Court Case Spells",
-      description: "Legal assistance through traditional methods to win court cases and overcome legal challenges.",
-      image: "https://images.unsplash.com/photo-1589216532372-9c7e1d8d5b8c?w=400&h=300&fit=crop"
-    },
-    {
-      title: "Marriage & Divorce",
-      description: "Traditional solutions for marriage problems, divorce prevention, and relationship healing.",
-      image: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&h=300&fit=crop"
-    },
-    {
-      title: "Fertility & Pregnancy",
-      description: "Traditional remedies for fertility issues, safe pregnancy, and childbirth complications.",
-      image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop"
-    },
-    {
-      title: "Business & Career",
-      description: "Spells for job promotion, business growth, customer attraction, and career advancement.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
-    },
-    {
-      title: "Health & Healing",
-      description: "Traditional healing for chronic illnesses, mental health issues, and spiritual ailments.",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop"
-    },
-    {
-      title: "Spiritual Guidance",
-      description: "Connect with ancestral spirits for guidance, wisdom, and spiritual direction in life decisions.",
-      image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop"
-    },
-    {
-      title: "Enemy Protection",
-      description: "Strong protection spells against enemies, jealousy, hatred, and those who wish you harm.",
-      image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&h=300&fit=crop"
-    },
-    {
-      title: "Gambling & Luck",
-      description: "Traditional methods to improve luck in gambling, lotteries, and games of chance.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
-    },
-    {
-      title: "Addiction Recovery",
-      description: "Traditional healing methods for overcoming addictions to alcohol, drugs, and harmful behaviors.",
-      image: "https://images.unsplash.com/photo-1559757145-5d4a4d97d7e0?w=400&h=300&fit=crop"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah M.",
-      text: "Kabanga Joel's love spells brought my husband back after 3 years of separation. I'm forever grateful for his powerful work.",
-      rating: 5
-    },
-    {
-      name: "James K.",
-      text: "After years of financial struggle, his money spells transformed my business. I now have more wealth than ever.",
-      rating: 5
-    },
-    {
-      name: "Mary A.",
-      text: "His protection spells saved me from enemies who wanted to destroy my life. Kabanga Joel is truly gifted.",
-      rating: 5
-    },
-    {
-      name: "David R.",
-      text: "Won my court case against all odds thanks to his powerful legal spells. Highly recommend his services.",
-      rating: 5
-    },
-    {
-      name: "Grace L.",
-      text: "After 10 years of trying, his fertility spells blessed me with twins. Kabanga Joel works miracles.",
-      rating: 5
-    },
-    {
-      name: "Peter M.",
-      text: "His business spells increased my customers by 300%. My shop is now the most successful in town.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
+  const services = [{
+    title: "Love Spells & Binding",
+    description: "Powerful love spells to bring back lost lovers, strengthen relationships, and create lasting romantic bonds.",
+    image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=300&fit=crop"
+  }, {
+    title: "Money & Wealth Spells",
+    description: "Traditional rituals to attract financial prosperity, business success, and remove money blockages.",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop"
+  }, {
+    title: "Protection & Cleansing",
+    description: "Spiritual protection from enemies, evil eyes, witchcraft, and negative energies affecting your life.",
+    image: "https://images.unsplash.com/photo-1544131750-2985d621da30?w=400&h=300&fit=crop"
+  }, {
+    title: "Court Case Spells",
+    description: "Legal assistance through traditional methods to win court cases and overcome legal challenges.",
+    image: "https://images.unsplash.com/photo-1589216532372-9c7e1d8d5b8c?w=400&h=300&fit=crop"
+  }, {
+    title: "Marriage & Divorce",
+    description: "Traditional solutions for marriage problems, divorce prevention, and relationship healing.",
+    image: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&h=300&fit=crop"
+  }, {
+    title: "Fertility & Pregnancy",
+    description: "Traditional remedies for fertility issues, safe pregnancy, and childbirth complications.",
+    image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop"
+  }, {
+    title: "Business & Career",
+    description: "Spells for job promotion, business growth, customer attraction, and career advancement.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
+  }, {
+    title: "Health & Healing",
+    description: "Traditional healing for chronic illnesses, mental health issues, and spiritual ailments.",
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop"
+  }, {
+    title: "Spiritual Guidance",
+    description: "Connect with ancestral spirits for guidance, wisdom, and spiritual direction in life decisions.",
+    image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop"
+  }, {
+    title: "Enemy Protection",
+    description: "Strong protection spells against enemies, jealousy, hatred, and those who wish you harm.",
+    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&h=300&fit=crop"
+  }, {
+    title: "Gambling & Luck",
+    description: "Traditional methods to improve luck in gambling, lotteries, and games of chance.",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+  }, {
+    title: "Addiction Recovery",
+    description: "Traditional healing methods for overcoming addictions to alcohol, drugs, and harmful behaviors.",
+    image: "https://images.unsplash.com/photo-1559757145-5d4a4d97d7e0?w=400&h=300&fit=crop"
+  }];
+  const testimonials = [{
+    name: "Sarah M.",
+    text: "Kabanga Joel's love spells brought my husband back after 3 years of separation. I'm forever grateful for his powerful work.",
+    rating: 5
+  }, {
+    name: "James K.",
+    text: "After years of financial struggle, his money spells transformed my business. I now have more wealth than ever.",
+    rating: 5
+  }, {
+    name: "Mary A.",
+    text: "His protection spells saved me from enemies who wanted to destroy my life. Kabanga Joel is truly gifted.",
+    rating: 5
+  }, {
+    name: "David R.",
+    text: "Won my court case against all odds thanks to his powerful legal spells. Highly recommend his services.",
+    rating: 5
+  }, {
+    name: "Grace L.",
+    text: "After 10 years of trying, his fertility spells blessed me with twins. Kabanga Joel works miracles.",
+    rating: 5
+  }, {
+    name: "Peter M.",
+    text: "His business spells increased my customers by 300%. My shop is now the most successful in town.",
+    rating: 5
+  }];
+  return <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrollY > 50 ? 'bg-amber-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-amber-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
             {/* Logo */}
@@ -137,7 +108,7 @@ const Index = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-amber-300 to-orange-400 rounded-lg flex items-center justify-center shadow-lg">
                   <span className="text-amber-900 font-bold text-xl">KJ</span>
                 </div>
-                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
+                
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-xl font-bold text-amber-100 leading-tight">Kabanga Joel</h1>
@@ -151,54 +122,34 @@ const Index = () => {
             
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'services', 'testimonials', 'contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className="text-amber-100 hover:text-amber-300 transition-colors capitalize font-medium"
-                >
+              {['home', 'about', 'services', 'testimonials', 'contact'].map(item => <button key={item} onClick={() => scrollToSection(item)} className="text-amber-100 hover:text-amber-300 transition-colors capitalize font-medium">
                   {item}
-                </button>
-              ))}
+                </button>)}
             </div>
 
             {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-amber-100"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
+            <button className="md:hidden text-amber-100" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
 
           {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-amber-700">
+          {isMenuOpen && <div className="md:hidden mt-4 pb-4 border-t border-amber-700">
               <div className="flex flex-col space-y-2 mt-4">
-                {['home', 'about', 'services', 'testimonials', 'contact'].map((item) => (
-                  <button
-                    key={item}
-                    onClick={() => scrollToSection(item)}
-                    className="text-amber-100 hover:text-amber-300 transition-colors capitalize font-medium py-2 text-left"
-                  >
+                {['home', 'about', 'services', 'testimonials', 'contact'].map(item => <button key={item} onClick={() => scrollToSection(item)} className="text-amber-100 hover:text-amber-300 transition-colors capitalize font-medium py-2 text-left">
                     {item}
-                  </button>
-                ))}
+                  </button>)}
               </div>
-            </div>
-          )}
+            </div>}
         </div>
       </nav>
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-900/30 to-orange-900/40"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop')"
-          }}
-        ></div>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop')"
+      }}></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="animate-fade-in bg-black/60 backdrop-blur-sm rounded-3xl p-8 max-w-4xl mx-auto">
             <div className="w-32 h-32 bg-gradient-to-br from-amber-200 to-orange-300 rounded-full flex items-center justify-center text-6xl mx-auto mb-6">
@@ -215,16 +166,10 @@ const Index = () => {
               Experience the power of ancient African traditions combined with powerful spells for love, money, protection, and success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="bg-amber-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-800 transition-all duration-300 hover:scale-105 shadow-lg"
-              >
+              <button onClick={() => scrollToSection('contact')} className="bg-amber-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-800 transition-all duration-300 hover:scale-105 shadow-lg">
                 Book Consultation
               </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="border-2 border-amber-200 text-amber-100 px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-200 hover:text-amber-900 transition-all duration-300 hover:scale-105"
-              >
+              <button onClick={() => scrollToSection('services')} className="border-2 border-amber-200 text-amber-100 px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-200 hover:text-amber-900 transition-all duration-300 hover:scale-105">
                 View Services
               </button>
             </div>
@@ -265,11 +210,7 @@ const Index = () => {
             </div>
             <div className="flex justify-center">
               <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop"
-                  alt="Spiritual Healer Kabanga Joel"
-                  className="rounded-xl shadow-2xl w-80 h-96 object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Spiritual Healer Kabanga Joel" className="rounded-xl shadow-2xl w-80 h-96 object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-900/30 to-transparent rounded-xl"></div>
               </div>
             </div>
@@ -287,22 +228,13 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-l-4 border-amber-600"
-              >
-                <img 
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-48 object-cover"
-                />
+            {services.map((service, index) => <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-l-4 border-amber-600">
+                <img src={service.image} alt={service.title} className="w-full h-48 object-cover" />
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-amber-900 mb-3">{service.title}</h3>
                   <p className="text-amber-700 leading-relaxed">{service.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -315,20 +247,13 @@ const Index = () => {
             <p className="text-lg text-amber-700">Real testimonials from people who have experienced powerful results</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              >
+            {testimonials.map((testimonial, index) => <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
-                  ))}
+                  {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />)}
                 </div>
                 <p className="text-amber-800 mb-4 italic">"{testimonial.text}"</p>
                 <p className="text-amber-900 font-semibold">- {testimonial.name}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -362,10 +287,7 @@ const Index = () => {
             </div>
           </div>
           <div className="text-center mt-12">
-            <button
-              onClick={generateWhatsAppMessage}
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg inline-flex items-center"
-            >
+            <button onClick={generateWhatsAppMessage} className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg inline-flex items-center">
               <MessageCircle className="w-6 h-6 mr-2" />
               WhatsApp Consultation
             </button>
@@ -374,11 +296,7 @@ const Index = () => {
       </section>
 
       {/* Floating WhatsApp Button */}
-      <button
-        onClick={generateWhatsAppMessage}
-        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50"
-        aria-label="WhatsApp Chat"
-      >
+      <button onClick={generateWhatsAppMessage} className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50" aria-label="WhatsApp Chat">
         <MessageCircle className="w-6 h-6" />
       </button>
 
@@ -389,8 +307,6 @@ const Index = () => {
           <p className="mt-2 text-sm text-amber-300">Ancient Wisdom • Powerful Spells • Guaranteed Results</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
