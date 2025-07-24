@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Star, Menu, X, MessageCircle } from 'lucide-react';
 
@@ -113,8 +114,11 @@ const Index = () => {
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-300 to-orange-400 rounded-lg flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-amber-300 to-orange-400 rounded-lg flex items-center justify-center shadow-lg border-2 border-amber-200">
                   <span className="text-amber-900 font-bold text-xl">KJ</span>
+                </div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-orange-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs">✨</span>
                 </div>
               </div>
               <div className="hidden sm:block">
@@ -169,7 +173,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-32 md:pt-24">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-900/30 to-orange-900/40"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
@@ -241,7 +245,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center">
+            <div className="hidden md:flex justify-center">
               <div className="relative">
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Spiritual Healer Kabanga Joel" className="rounded-xl shadow-2xl w-80 h-96 object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-900/30 to-transparent rounded-xl"></div>
