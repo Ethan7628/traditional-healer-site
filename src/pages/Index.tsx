@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Star, Menu, X, MessageCircle } from 'lucide-react';
 
@@ -23,7 +22,7 @@ const Index = () => {
   };
 
   const generateWhatsAppMessage = () => {
-    const message = "Hello Spiritual Healer Kabanga Joel, I would like to schedule a consultation for traditional healing services. Please let me know your availability.";
+    const message = "Hello Spiritual Healer Papa Shonga, I would like to schedule a consultation for traditional healing services. Please let me know your availability.";
     const phoneNumber = "256701234567"; // Replace with actual WhatsApp number
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
@@ -81,7 +80,7 @@ const Index = () => {
 
   const testimonials = [{
     name: "Sarah M.",
-    text: "Kabanga Joel's love spells brought my husband back after 3 years of separation. I'm forever grateful for his powerful work.",
+    text: "Papa Shonga's love spells brought my husband back after 3 years of separation. I'm forever grateful for his powerful work.",
     rating: 5
   }, {
     name: "James K.",
@@ -89,7 +88,7 @@ const Index = () => {
     rating: 5
   }, {
     name: "Mary A.",
-    text: "His protection spells saved me from enemies who wanted to destroy my life. Kabanga Joel is truly gifted.",
+    text: "His protection spells saved me from enemies who wanted to destroy my life. Papa Shonga is truly gifted.",
     rating: 5
   }, {
     name: "David R.",
@@ -97,7 +96,7 @@ const Index = () => {
     rating: 5
   }, {
     name: "Grace L.",
-    text: "After 10 years of trying, his fertility spells blessed me with twins. Kabanga Joel works miracles.",
+    text: "After 10 years of trying, his fertility spells blessed me with twins. Papa Shonga works miracles.",
     rating: 5
   }, {
     name: "Peter M.",
@@ -122,7 +121,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-amber-100 leading-tight">Kabanga Joel</h1>
+                <h1 className="text-xl font-bold text-amber-100 leading-tight">Papa Shonga</h1>
                 <p className="text-amber-300 text-xs font-medium">Spiritual Healer</p>
               </div>
               <div className="sm:hidden">
@@ -187,7 +186,7 @@ const Index = () => {
               👨‍⚕️
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-amber-100 mb-4 leading-tight">
-              Spiritual Healer Kabanga Joel
+              Spiritual Healer Papa Shonga
             </h1>
             <h2 className="text-xl md:text-2xl text-amber-200 mb-6 font-semibold">
               Powerful Traditional Healer & Spiritual Guide
@@ -219,16 +218,16 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h2 className="text-4xl font-bold text-amber-900 mb-6">About Spiritual Healer Kabanga Joel</h2>
+              <h2 className="text-4xl font-bold text-amber-900 mb-6">About Spiritual Healer Papa Shonga</h2>
               <p className="text-lg text-amber-800 mb-6 leading-relaxed">
                 With over three decades of experience in traditional African healing and spiritual guidance, 
-                Kabanga Joel comes from a long lineage of respected healers and spiritual practitioners. 
+                Papa Shonga comes from a long lineage of respected healers and spiritual practitioners. 
                 Born with the gift of connecting with ancestral spirits and understanding the powerful forces of nature.
               </p>
               <p className="text-lg text-amber-800 mb-6 leading-relaxed">
                 His mission is to help people overcome life's challenges through powerful traditional spells, 
                 spiritual cleansing, and ancestral guidance. Whether you need love spells, money spells, 
-                protection, or healing, Kabanga Joel provides authentic solutions that deliver real results.
+                protection, or healing, Papa Shonga provides authentic solutions that deliver real results.
               </p>
               <div className="flex flex-wrap gap-4 text-amber-700">
                 <div className="flex items-center">
@@ -247,7 +246,7 @@ const Index = () => {
             </div>
             <div className="hidden md:flex justify-center">
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Spiritual Healer Kabanga Joel" className="rounded-xl shadow-2xl w-80 h-96 object-cover" />
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Spiritual Healer Papa Shonga" className="rounded-xl shadow-2xl w-80 h-96 object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-900/30 to-transparent rounded-xl"></div>
               </div>
             </div>
@@ -306,7 +305,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-            <p className="text-lg text-amber-100">Ready to transform your life? Contact Spiritual Healer Kabanga Joel today</p>
+            <p className="text-lg text-amber-100">Ready to transform your life? Contact Spiritual Healer Papa Shonga today</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
@@ -353,7 +352,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-amber-950 text-amber-100 py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 Spiritual Healer Kabanga Joel. All rights reserved.</p>
+          <p>&copy; 2024 Spiritual Healer Papa Shonga. All rights reserved.</p>
           <p className="mt-2 text-sm text-amber-300">Ancient Wisdom • Powerful Spells • Guaranteed Results</p>
         </div>
       </footer>
