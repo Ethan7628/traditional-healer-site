@@ -31,15 +31,15 @@ const Index = () => {
   const services = [{
     title: "Love Spells & Binding",
     description: "Powerful love spells to bring back lost lovers, strengthen relationships, and create lasting romantic bonds.",
-    image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=300&fit=crop"
+    image: "/lovable-uploads/dcce88fc-064c-4893-8f81-0bfb647fee8f.png"
   }, {
-    title: "Money & Wealth Spells",
+    title: "Money & Wealth Spells", 
     description: "Traditional rituals to attract financial prosperity, business success, and remove money blockages.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop"
   }, {
     title: "Protection & Cleansing",
     description: "Spiritual protection from enemies, evil eyes, witchcraft, and negative energies affecting your life.",
-    image: "https://images.unsplash.com/photo-1544131750-2985d621da30?w=400&h=300&fit=crop"
+    image: "/lovable-uploads/fd8806e4-00e4-49bd-8998-6dd56c240ff6.png"
   }, {
     title: "Court Case Spells",
     description: "Legal assistance through traditional methods to win court cases and overcome legal challenges.",
@@ -63,19 +63,19 @@ const Index = () => {
   }, {
     title: "Spiritual Guidance",
     description: "Connect with ancestral spirits for guidance, wisdom, and spiritual direction in life decisions.",
-    image: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=400&h=300&fit=crop"
+    image: "/lovable-uploads/92d2b722-1fdd-470d-87fa-f6fcc8a8e410.png"
   }, {
     title: "Enemy Protection",
     description: "Strong protection spells against enemies, jealousy, hatred, and those who wish you harm.",
     image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&h=300&fit=crop"
   }, {
-    title: "Gambling & Luck",
-    description: "Traditional methods to improve luck in gambling, lotteries, and games of chance.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    title: "Traditional Rituals",
+    description: "Authentic African traditional ceremonies and rituals for various spiritual purposes.",
+    image: "/lovable-uploads/03a16e47-7a76-4fbc-8a79-b34b5997119d.png"
   }, {
-    title: "Addiction Recovery",
-    description: "Traditional healing methods for overcoming addictions to alcohol, drugs, and harmful behaviors.",
-    image: "https://images.unsplash.com/photo-1559757145-5d4a4d97d7e0?w=400&h=300&fit=crop"
+    title: "Spiritual Ceremonies",
+    description: "Powerful spiritual ceremonies with traditional herbs, candles, and ancestral guidance.",
+    image: "/lovable-uploads/e2aa1c75-3178-4d18-a71b-668583da6665.png"
   }];
 
   const testimonials = [{
@@ -114,7 +114,7 @@ const Index = () => {
             <div className="flex items-center space-x-3">
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-br from-amber-300 to-orange-400 rounded-lg flex items-center justify-center shadow-lg border-2 border-amber-200">
-                  <span className="text-amber-900 font-bold text-xl">KJ</span>
+                  <span className="text-amber-900 font-bold text-xl">P.S</span>
                 </div>
                 <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-orange-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-xs">✨</span>
@@ -125,7 +125,7 @@ const Index = () => {
                 <p className="text-amber-300 text-xs font-medium">Spiritual Healer</p>
               </div>
               <div className="sm:hidden">
-                <h1 className="text-lg font-bold text-amber-100">KJ</h1>
+                <h1 className="text-lg font-bold text-amber-100">P.S</h1>
                 <p className="text-amber-300 text-xs">Spiritual Healer</p>
               </div>
             </div>
@@ -172,7 +172,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-32 md:pt-24">
+      <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-40 md:pt-32">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-900/30 to-orange-900/40"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
@@ -246,7 +246,7 @@ const Index = () => {
             </div>
             <div className="hidden md:flex justify-center">
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop" alt="Spiritual Healer Papa Shonga" className="rounded-xl shadow-2xl w-80 h-96 object-cover" />
+                <img src="/lovable-uploads/99e176a1-39bc-4a0b-b42f-a1434d5223a5.png" alt="Traditional Spiritual Healing Ceremony" className="rounded-xl shadow-2xl w-80 h-96 object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-900/30 to-transparent rounded-xl"></div>
               </div>
             </div>
@@ -318,8 +318,8 @@ const Index = () => {
             <div className="text-center">
               <Mail className="w-12 h-12 mx-auto mb-4 text-amber-300" />
               <h3 className="text-xl font-bold mb-2">Email</h3>
-              <a href="mailto:kabangajoel@healing.com" className="text-amber-100 hover:text-amber-300 transition-colors">
-                kabangajoel@healing.com
+              <a href="mailto:papashonga@healing.com" className="text-amber-100 hover:text-amber-300 transition-colors">
+                papashonga@healing.com
               </a>
             </div>
             <div className="text-center">
