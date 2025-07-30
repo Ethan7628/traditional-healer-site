@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Star, Menu, X, MessageCircle } from 'lucide-react';
+
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -17,18 +20,20 @@ const Index = () => {
       setIsMenuOpen(false);
     }
   };
+
   const generateWhatsAppMessage = () => {
     const message = "Hello Spiritual Healer Papa Shonga, I would like to schedule a consultation for traditional healing services. Please let me know your availability.";
     const phoneNumber = "256701234567"; // Replace with actual WhatsApp number
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
+
   const services = [{
     title: "Love Spells & Binding",
     description: "Powerful love spells to bring back lost lovers, strengthen relationships, and create lasting romantic bonds.",
     image: "/lovable-uploads/dcce88fc-064c-4893-8f81-0bfb647fee8f.png"
   }, {
-    title: "Money & Wealth Spells",
+    title: "Money & Wealth Spells", 
     description: "Traditional rituals to attract financial prosperity, business success, and remove money blockages.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop"
   }, {
@@ -54,7 +59,7 @@ const Index = () => {
   }, {
     title: "Health & Healing",
     description: "Traditional healing for chronic illnesses, mental health issues, and spiritual ailments.",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop"
+    image: "/lovable-uploads/0c2ed710-ef4e-43d0-be71-62451c35f119.png"
   }, {
     title: "Spiritual Guidance",
     description: "Connect with ancestral spirits for guidance, wisdom, and spiritual direction in life decisions.",
@@ -62,7 +67,7 @@ const Index = () => {
   }, {
     title: "Enemy Protection",
     description: "Strong protection spells against enemies, jealousy, hatred, and those who wish you harm.",
-    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=400&h=300&fit=crop"
+    image: "/lovable-uploads/bd01a19a-6404-42b1-86ee-51abc231ac74.png"
   }, {
     title: "Traditional Rituals",
     description: "Authentic African traditional ceremonies and rituals for various spiritual purposes.",
@@ -72,6 +77,7 @@ const Index = () => {
     description: "Powerful spiritual ceremonies with traditional herbs, candles, and ancestral guidance.",
     image: "/lovable-uploads/e2aa1c75-3178-4d18-a71b-668583da6665.png"
   }];
+
   const testimonials = [{
     name: "Sarah M.",
     text: "Papa Shonga's love spells brought my husband back after 3 years of separation. I'm forever grateful for his powerful work.",
@@ -97,6 +103,7 @@ const Index = () => {
     text: "His business spells increased my customers by 300%. My shop is now the most successful in town.",
     rating: 5
   }];
+
   return <div className="min-h-screen bg-gradient-to-b from-amber-50 to-orange-50">
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-amber-900/95 backdrop-blur-md shadow-lg' : 'bg-amber-900/90 backdrop-blur-sm'}`}>
@@ -148,12 +155,12 @@ const Index = () => {
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-40 md:pt-32">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-900/30 to-orange-900/40"></div>
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop')"
+        backgroundImage: "url('/lovable-uploads/b700ff07-1604-4094-8f18-b8a49128d678.png')"
       }}></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="animate-fade-in bg-black/60 backdrop-blur-sm rounded-3xl p-8 max-w-4xl mx-auto">
-            <div className="w-32 h-32 bg-gradient-to-br from-amber-200 to-orange-300 rounded-full flex items-center justify-center text-6xl mx-auto mb-6">
-              👨‍⚕️
+            <div className="w-32 h-32 bg-gradient-to-br from-amber-200 to-orange-300 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
+              <img src="/lovable-uploads/0f57d0b3-87fa-4f96-81b1-3a06a1291539.png" alt="Papa Shonga Spiritual Healer" className="w-full h-full object-cover" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-amber-100 mb-4 leading-tight">
               Spiritual Healer Papa Shonga
@@ -309,4 +316,5 @@ const Index = () => {
       </footer>
     </div>;
 };
+
 export default Index;
