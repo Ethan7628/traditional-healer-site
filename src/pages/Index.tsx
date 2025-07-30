@@ -43,7 +43,7 @@ const Index = () => {
   }, {
     title: "Court Case Spells",
     description: "Legal assistance through traditional methods to win court cases and overcome legal challenges.",
-    image: "https://images.unsplash.com/photo-1589216532372-9c7e1d8d5b8c?w=400&h=300&fit=crop"
+    image: "/lovable-uploads/b2f5b4ec-d3ee-4497-85ae-11cab40f3dbc.png"
   }, {
     title: "Marriage & Divorce",
     description: "Traditional solutions for marriage problems, divorce prevention, and relationship healing.",
@@ -51,11 +51,11 @@ const Index = () => {
   }, {
     title: "Fertility & Pregnancy",
     description: "Traditional remedies for fertility issues, safe pregnancy, and childbirth complications.",
-    image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop"
+    image: "/lovable-uploads/62817db7-efc1-4648-ab15-d3a0880024bd.png"
   }, {
     title: "Business & Career",
     description: "Spells for job promotion, business growth, customer attraction, and career advancement.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
+    image: "/lovable-uploads/c12a2f93-b9de-4ec8-9f38-caa7e4ea36ed.png"
   }, {
     title: "Health & Healing",
     description: "Traditional healing for chronic illnesses, mental health issues, and spiritual ailments.",
