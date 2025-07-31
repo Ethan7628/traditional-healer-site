@@ -32,6 +32,17 @@ function useChart() {
   return context
 }
 
+// Security helper to sanitize CSS values
+const sanitizeCSSValue = (value: string): string => {
+  // Remove potentially dangerous characters and limit to safe CSS color formats
+  return value.replace(/[^a-zA-Z0-9#(),%.\-\s]/g, '').slice(0, 50)
+}
+
+// Security helper to validate theme keys
+const isValidThemeKey = (key: string): boolean => {
+  return /^[a-zA-Z][a-zA-Z0-9_-]*$/.test(key) && key.length <= 50
+}
+
 const ChartContainer = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> & {
@@ -67,7 +78,11 @@ ChartContainer.displayName = "Chart"
 
 const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
   const colorConfig = Object.entries(config).filter(
-    ([_, config]) => config.theme || config.color
+    ([key, itemConfig]) => {
+      // Enhanced validation: check key format and config validity
+      if (!isValidThemeKey(key)) return false
+      return itemConfig.theme || itemConfig.color
+    }
   )
 
   if (!colorConfig.length) {
@@ -86,8 +101,15 @@ ${colorConfig
     const color =
       itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||
       itemConfig.color
-    return color ? `  --color-${key}: ${color};` : null
+    
+    // Enhanced security: validate and sanitize color values
+    if (!color || typeof color !== 'string') return null
+    const sanitizedColor = sanitizeCSSValue(color)
+    const sanitizedKey = sanitizeCSSValue(key)
+    
+    return sanitizedColor && sanitizedKey ? `  --color-${sanitizedKey}: ${sanitizedColor};` : null
   })
+  .filter(Boolean)
   .join("\n")}
 }
 `
